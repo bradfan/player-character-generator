@@ -14,7 +14,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: tan;
+  
 }
 
 .header {
@@ -22,6 +22,7 @@ body {
   border: solid black;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
+  background-color: tan;
 }
 
 .title {
@@ -36,4 +37,19 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
+
+.button {
+  text-align: center;
+  /* height: 5rem; */
+  padding: 2rem;
+
+}
+.btn {
+  height: 3rem;
+  width: 10rem;
+  
+}
+
+
