@@ -14,7 +14,7 @@ html {
 
 body {
   box-sizing: border-box;
-  
+  background-color: tan;
 }
 
 .header {
@@ -22,7 +22,6 @@ body {
   border: solid black;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  background-color: tan;
 }
 
 .title {
@@ -31,25 +30,51 @@ body {
   font-size: 5rem;
 }
 
-.generator {
-    background-image: linear-gradient(to right bottom, rgba(174, 213, 111, 0.7), rgba(180, 154, 40, 0.7)), url(images/open.jpg);
-    height: 95vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+.character {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(174, 213, 111, 0.7),
+      rgba(180, 154, 40, 0.7)
+    ),
+    url(images/open.jpg);
+  height: 95vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
 }
 
 .button {
   text-align: center;
   /* height: 5rem; */
   padding: 2rem;
-
 }
 .btn {
   height: 3rem;
   width: 10rem;
-  
 }
 
+.btn-start-after {
+  display: none;
+}
 
+form {
+  font-size: 2rem;
+  padding: 2rem 0rem 0rem 2rem;
+
+}
+
+ h3 {
+   padding-bottom: 1rem;
+
+ }
+
+ ul {
+   list-style: none;
+
+ }
+
+ li {
+   padding-top: 1rem;
+
+ }

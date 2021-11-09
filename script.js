@@ -1,18 +1,18 @@
 "use strict";
 
-const bellCurve = () => (Math.trunc(Math.random() * 6 + 1) * 3)
-console.log(bellCurve());
-console.log(bellCurve());
-console.log(bellCurve());
-console.log(bellCurve());
-console.log(bellCurve());
-console.log(bellCurve());
+const bellCurve = () => Math.trunc(Math.random() * 6 + 1) * 3;
+const clickedBtn = document.querySelector(".btn");
+const showInfo = document.querySelector(".btn");
 const generatorContainer = document.getElementById("generator");
 
 document.querySelector(".btn-start").addEventListener("click", function () {
-    // clears the created element upon each "click"
+  clickedBtn.classList.add("btn-start-after");
+  // clears the created element upon each "click"
   generatorContainer.innerHTML = "";
-  let containerGen = document.createElement("div");
+  let containerGen = document.createElement("form");
+  const description = document.createElement("h3");
+  description.innerHTML = "Attributes";
+  containerGen.append(description);
   let attributes = document.createElement("ul");
   containerGen.append(attributes);
   let strength = document.createElement("li");
@@ -36,4 +36,5 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 
   generatorContainer.append(containerGen);
 
-})
+});
+
