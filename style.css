@@ -46,12 +46,20 @@ body {
 
 nav {
   text-align: center;
-  /* height: 5rem; */
+  height: 5rem;
   padding: 2rem;
 }
 button {
-  height: 3rem;
-  width: 10rem;
+  border-radius: 10px;
+  height: 5rem;
+  width: 20rem;
+  font-family:MedievalSharp;
+  background-color: aqua;
+  
+}
+
+.btn-start {
+  font-size:2rem;
 }
 
 .btn-start-after {
@@ -91,8 +99,8 @@ form {
  }
 
  .btn-confirm {
-   height: 3rem;
+   /* height: 3rem;
   width: 10rem;
-
+   background-color:red; */
  }
 

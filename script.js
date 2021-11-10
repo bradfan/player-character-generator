@@ -2,7 +2,7 @@
 
 const bellCurve = () => Math.trunc(Math.random() * 6 + 1) * 3;
 const clickedBtn = document.querySelector(".btn-start");
-const confirmDiv = document.querySelector(".btn-start");
+const confirmNav = document.querySelector(".btn-start");
 const confirmBtn = document.querySelector(".btn-start");
 const showInfo = document.querySelector(".btn-confirm");
 const generatorContainer = document.getElementById("generator");
@@ -37,14 +37,31 @@ document.querySelector(".btn-start").addEventListener("click", function () {
   charisma.innerHTML = `Charisma: ${bellCurve()}`;
   attributes.append(charisma);
   let buttonNav = document.createElement("nav");
-  confirmDiv.classList.add("confirm");
+  confirmNav.classList.add("confirm");
   generatorContainer.append(buttonNav);
   let button = document.createElement("button");
-  button.innerHTML = "Confirm!"
+  button.innerHTML = "If you like this character please click here; otherwise hit refresh."
+  button.name = "confirm";
+  button.id="confirm";
+  button.setAttribute("class", "btn-confirm");
+  // confirmBtn.classList.add(".btn-confirm")
   buttonNav.append(button);
-  confirmBtn.classList.add(".btn-confirm")
-
+  
+  
   generatorContainer.append(containerGen);
+  
+
 
 });
 
+// use setAttribute to set classes for buttons individually. replace "nav" with "div" and change CSS to individual classes and not element tags.  push changes
+
+// remove classList items where neccesary. push changes
+
+// next, build a document.querySelector off the confirm button to display the data for the "info" div. build in prompts (?) for the user to input name, class and race. push changes
+
+// css the info div to move laterally across the page. push changes
+
+// assign background images based on chosen class. push changes
+
+// refactor a "refresh page" feature instead of telling the user to refresh the page if they get a fuckTard. push changes
