@@ -2,15 +2,18 @@
 
 const bellCurve = () => Math.trunc(Math.random() * 6 + 1) * 3;
 const clickedBtn = document.querySelector(".btn-start");
-
+const hideHeader = document.querySelector(".header");
 const generatorContainer = document.getElementById("generator");
 const infoContainer = document.getElementById("info");
+infoContainer.setAttribute("class", "info-large");
 
 document.querySelector(".btn-start").addEventListener("click", function () {
+  hideHeader.classList.add("header-after");
   clickedBtn.classList.add("btn-start-after");
   // clears the created element upon each "click"
   generatorContainer.innerHTML = "";
   let containerGen = document.createElement("form");
+  containerGen.setAttribute("class", "uniform");
   const description = document.createElement("h3");
   description.innerHTML = "Attributes";
   containerGen.append(description);
@@ -44,25 +47,25 @@ document.querySelector(".btn-start").addEventListener("click", function () {
   button.name = "confirm";
   button.id = "confirm";
   // button.setAttribute("class", "btn");
-
   buttonDiv.append(button);
 
   generatorContainer.append(containerGen);
 
-  document.querySelector(".btn-confirm").addEventListener("click", function () {
+ document.querySelector(".btn-confirm").addEventListener("click", function () {
     const clickedConfirm = document.querySelector(".btn-confirm");
     clickedConfirm.classList.add("btn-confirm-after");
     let containerInfo = document.createElement("div");
     containerInfo.setAttribute("class", "container-info");
     let nameBox = document.createElement("div");
-    nameBox.setAttribute("class", "name-box");
+    nameBox.id = "info-box";
+    nameBox.setAttribute("class", "uniform");
     containerInfo.append(nameBox);
     let nameInput = document.createElement("input");
     nameInput.setAttribute("class", "name-input");
     nameInput.type = "text";
     nameInput.id = "name-input";
     nameInput.placeholder = "Please enter name";
-    nameInput.name = "nameInput";
+    nameInput.name = "name-input";
     // nameInput.value = text;
     nameBox.append(nameInput);
     let nameBtn = document.createElement("button");
@@ -70,20 +73,25 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     nameBtn.innerHTML = "Submit";
     nameBtn.id = "name-submit";
     nameBox.append(nameBtn);
-   
-    infoContainer.append(containerInfo); 
 
-    document.querySelector("#name-submit").addEventListener("click", function () {
-      let burrito = document.getElementById('name-input').value;
-      console.log('burrito', burrito);
-      let charName = document.createElement("h3");
-      charName.innerHTML = `Name: ${burrito}`;
+    infoContainer.append(containerInfo);
+
+    document.querySelector(".btn-name").addEventListener("click", function () {
+      let nameVar = document.getElementById("name-input").value;
+      let charName = document.createElement("h2");
+      charName.setAttribute("class", "name-title");
+      if (nameVar == "") return alert("You must enter a name.");
+      charName.innerHTML = `Name: ${nameVar}`;
       nameBox.append(charName);
-      
+      const clickedName = document.querySelector(".btn-name");
+      clickedName.classList.add("btn-name-after");
+      const clickedInput = document.querySelector(".name-input");
+      clickedInput.classList.add("name-input-after");
+
     });
-      
-      
+
   });
+
 });
 
 // use setAttribute to set classes for buttons individually. replace "nav" with "div" and change CSS to individual classes and not element tags.  push changes
@@ -99,15 +107,3 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 // refactor a "refresh page" feature instead of telling the user to refresh the page if they get a fuckTard. push changes
 
 
- 
-
-     // nameBtn.onclick = addEventListener("submit", function() {
-    //   let burrito = document.querySelector('#nameInput').value;
-    //   let charName = document.createElement("h3");
-      
-    //   charName.innerHtml = `Name: ${burrito}`;
-    //   console.log('name', burrito)
-    //   nameBox.append(charName);
-    // })
-
-    // getElementById("name-submit").textContent;

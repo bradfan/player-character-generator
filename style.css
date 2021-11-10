@@ -15,6 +15,7 @@ html {
 body {
   box-sizing: border-box;
   background-color: tan;
+  
 }
 
 .header {
@@ -23,6 +24,10 @@ body {
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
 }
+
+/* .header-after {
+  opacity: 0;
+} */
 
 .title {
   padding: 2rem;
@@ -65,7 +70,7 @@ button {
   display: none;
 }
 
-form {
+.uniform {
   font-size: 2rem;
   padding: 2rem 0rem 0rem 2rem;
 }
@@ -99,12 +104,20 @@ li {
    opacity: 0;
 }
 
+.info-large {
+  display: inline-block;
+  
+  width: 100%;
+}
+
 .container-info {
 
 }
 
-.name-box {
-
+#info-box {
+  border: 3px solid black;
+  background-color: #fff;
+  width: 16%;
 }
 
 .name-input {
@@ -118,8 +131,21 @@ li {
   
 }
 
+.name-input-after {
+  opacity: 0;
+}
+
 .btn-name {
   width: 10rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.btn-name-after {
+  opacity: 0;
+}
+
+.name-title {
   font-size: 2rem;
   font-weight: bold;
 }
