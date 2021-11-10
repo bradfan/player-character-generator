@@ -51,7 +51,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 
   generatorContainer.append(containerGen);
 
- document.querySelector(".btn-confirm").addEventListener("click", function () {
+  document.querySelector(".btn-confirm").addEventListener("click", function () {
     const clickedConfirm = document.querySelector(".btn-confirm");
     clickedConfirm.classList.add("btn-confirm-after");
     let containerInfo = document.createElement("div");
@@ -87,23 +87,142 @@ document.querySelector(".btn-start").addEventListener("click", function () {
       clickedName.classList.add("btn-name-after");
       const clickedInput = document.querySelector(".name-input");
       clickedInput.classList.add("name-input-after");
+      let classForm = document.createElement("form");
+      classForm.id = "#info-box";
+      classForm.setAttribute("class", "uniform");
+      let classPrompt = document.querySelector("h3");
+      classPrompt.setAttribute("class", "class-title");
+      classPrompt.innerHTML = "Choose which class your character is";
+      classForm.append(classPrompt);
+      let fighterBtn = document.createElement("input");
+      let fighterBtnLbl = document.createElement("label");
+      fighterBtnLbl.for = "fighterBtn";
+      fighterBtnLbl.innerHTML = "Fighter  ";
+      classForm.append(fighterBtnLbl);
+      fighterBtn.type = "radio";
+      fighterBtn.id = "fighter";
+      fighterBtn.name = "class";
+      fighterBtn.value = "Fighter";
+      
+      classForm.append(fighterBtn);
 
+      let palladinBtn = document.createElement("input");
+      let palladinBtnLbl = document.createElement("label");
+      palladinBtnLbl.for = "palladinBtn";
+      palladinBtnLbl.innerHTML = "Palladin  ";
+      classForm.append(palladinBtnLbl);
+      palladinBtn.type = "radio";
+      palladinBtn.id = "palladin";
+      palladinBtn.name = "class";
+      palladinBtn.value = "Palladin";
+      
+      classForm.append(palladinBtn);
+
+      let rangerBtn = document.createElement("input");
+      let rangerBtnLbl = document.createElement("label");
+      rangerBtnLbl.for = "rangerBtn";
+      rangerBtnLbl.innerHTML = "Ranger  ";
+      classForm.append(rangerBtnLbl);
+      rangerBtn.type = "radio";
+      rangerBtn.id = "ranger";
+      rangerBtn.name = "class";
+      rangerBtn.value = "Ranger";
+
+      classForm.append(rangerBtn);
+
+      let clericBtn = document.createElement("input");
+      let clericBtnLbl = document.createElement("label");
+      clericBtnLbl.for = "clericBtn";
+      clericBtnLbl.innerHTML = "Cleric  ";
+      classForm.append(clericBtnLbl);
+      clericBtn.type = "radio";
+      clericBtn.id = "cleric";
+      clericBtn.name = "class";
+      clericBtn.value = "Cleric";
+
+      classForm.append(clericBtn);
+
+      let druidBtn = document.createElement("input");
+      let druidBtnLbl = document.createElement("label");
+      druidBtnLbl.for = "druidBtn";
+      druidBtnLbl.innerHTML = "Druid  ";
+      classForm.append(druidBtnLbl);
+      druidBtn.type = "radio";
+      druidBtn.id = "druid";
+      druidBtn.name = "class";
+      druidBtn.value = "druid";
+
+      classForm.append(druidBtn);
+
+      let magicUserBtn = document.createElement("input");
+      let magicUserBtnLbl = document.createElement("label");
+      magicUserBtnLbl.for = "magicUserBtn";
+      magicUserBtnLbl.innerHTML = "Magic-User  ";
+      classForm.append(magicUserBtnLbl);
+      magicUserBtn.type = "radio";
+      magicUserBtn.id = "magicUser";
+      magicUserBtn.name = "class";
+      magicUserBtn.value = "MagicUser";
+
+      classForm.append(magicUserBtn);
+
+      let illusionistBtn = document.createElement("input");
+      let illusionistBtnLbl = document.createElement("label");
+      illusionistBtnLbl.for = "illusionistBtn";
+      illusionistBtnLbl.innerHTML = "Illusionist  ";
+      classForm.append(illusionistBtnLbl);
+      illusionistBtn.type = "radio";
+      illusionistBtn.id = "illusionist";
+      illusionistBtn.name = "class";
+      illusionistBtn.value = "Illusionist";
+
+      classForm.append(illusionistBtn);
+
+      let thiefBtn = document.createElement("input");
+      let thiefBtnLbl = document.createElement("label");
+      thiefBtnLbl.for = "thiefBtn";
+      thiefBtnLbl.innerHTML = "Thief  ";
+      classForm.append(thiefBtnLbl);
+      thiefBtn.type = "radio";
+      thiefBtn.id = "thief";
+      thiefBtn.name = "class";
+      thiefBtn.value = "Thief";
+
+      classForm.append(thiefBtn);
+
+      let assasinBtn = document.createElement("input");
+      let assasinBtnLbl = document.createElement("label");
+      assasinBtnLbl.for = "assasinBtn";
+      assasinBtnLbl.innerHTML = "Assasin  ";
+      classForm.append(assasinBtnLbl);
+      assasinBtn.type = "radio";
+      assasinBtn.id = "assasin";
+      assasinBtn.name = "class";
+      assasinBtn.value = "Assasin";
+
+      classForm.append(assasinBtn);
+      
+      
+
+      infoContainer.append(classForm);
     });
-
   });
-
 });
 
-// use setAttribute to set classes for buttons individually. replace "nav" with "div" and change CSS to individual classes and not element tags.  push changes
+// use setAttribute to set classes for buttons individually. replace "nav" with "div" and change CSS to individual classes and not element tags.  push changes 11/10
 
-// remove classList items where neccesary. push changes
+// remove classList items where neccesary. push changes 11/10
 
-// next, build a document.querySelector off the confirm button to display the data for the "info" div. build in prompts (?) for the user to input name, class and race. push changes
+// look for where we can eliminate and simplify code. this function is getting huge. I could not get the addEventlisteners to fire when the querySelectors were not nested.
 
-// css the info div to move laterally across the page. push changes
+// next, build a document.querySelector off the confirm button to display the data for the "info" div. build in prompts (?) for the user to input name, class and race. push changes IN PROGRESS
+
+// look into removing elements once they are no longer neccesary
+
+// ATTRIBUTES IS BEING COVERED UP CONTAINERiNFO(/)
+
+// css the info div to move laterally across the page. look at display for info-large and containerInfo. push changes
 
 // assign background images based on chosen class. push changes
 
 // refactor a "refresh page" feature instead of telling the user to refresh the page if they get a fuckTard. push changes
-
-
