@@ -60,7 +60,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     let nameInput = document.createElement("input");
     nameInput.setAttribute("class", "name-input");
     nameInput.type = "text";
-    nameInput.id = "nameInput";
+    nameInput.id = "name-input";
     nameInput.placeholder = "Please enter name";
     nameInput.name = "nameInput";
     // nameInput.value = text;
@@ -68,10 +68,19 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     let nameBtn = document.createElement("button");
     nameBtn.setAttribute("class", "btn-name");
     nameBtn.innerHTML = "Submit";
-    nameBtn.id = "nameSubmit";
+    nameBtn.id = "name-submit";
     nameBox.append(nameBtn);
    
     infoContainer.append(containerInfo); 
+
+    document.querySelector("#name-submit").addEventListener("click", function () {
+      let burrito = document.getElementById('name-input').value;
+      console.log('burrito', burrito);
+      let charName = document.createElement("h3");
+      charName.innerHTML = `Name: ${burrito}`;
+      nameBox.append(charName);
+      
+    });
       
       
   });
@@ -90,12 +99,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 // refactor a "refresh page" feature instead of telling the user to refresh the page if they get a fuckTard. push changes
 
 
- // document.querySelector(".btn-name").addEventListener("click", function () {
-    //   let charName = document.getElementById("nameSubmit").textContent;
-    //   if (charName == "") {return alert("You must choose a name")
-    // } else
-    //   charName.innerHTML = `Character name: ${charName}`;
-    // });
+ 
 
      // nameBtn.onclick = addEventListener("submit", function() {
     //   let burrito = document.querySelector('#nameInput').value;
@@ -105,3 +109,5 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     //   console.log('name', burrito)
     //   nameBox.append(charName);
     // })
+
+    // getElementById("name-submit").textContent;
