@@ -56,7 +56,6 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     containerInfo.setAttribute("class", "container-info");
     let nameBox = document.createElement("div");
     nameBox.setAttribute("class", "name-box");
-
     containerInfo.append(nameBox);
     let nameInput = document.createElement("input");
     nameInput.setAttribute("class", "name-input");
@@ -64,18 +63,17 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     nameInput.id = "nameInput";
     nameInput.placeholder = "Please enter name";
     nameInput.name = "nameInput";
-    nameInput.value = "";
+    // nameInput.value = text;
     nameBox.append(nameInput);
     let nameBtn = document.createElement("button");
     nameBtn.setAttribute("class", "btn-name");
     nameBtn.innerHTML = "Submit";
-    nameBtn.name = "nameSubmit";
     nameBtn.id = "nameSubmit";
     nameBox.append(nameBtn);
-    
-    
-
-    infoContainer.append(containerInfo);
+   
+    infoContainer.append(containerInfo); 
+      
+      
   });
 });
 
@@ -90,3 +88,20 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 // assign background images based on chosen class. push changes
 
 // refactor a "refresh page" feature instead of telling the user to refresh the page if they get a fuckTard. push changes
+
+
+ // document.querySelector(".btn-name").addEventListener("click", function () {
+    //   let charName = document.getElementById("nameSubmit").textContent;
+    //   if (charName == "") {return alert("You must choose a name")
+    // } else
+    //   charName.innerHTML = `Character name: ${charName}`;
+    // });
+
+     // nameBtn.onclick = addEventListener("submit", function() {
+    //   let burrito = document.querySelector('#nameInput').value;
+    //   let charName = document.createElement("h3");
+      
+    //   charName.innerHtml = `Name: ${burrito}`;
+    //   console.log('name', burrito)
+    //   nameBox.append(charName);
+    // })
