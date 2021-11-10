@@ -44,12 +44,12 @@ body {
   padding: 1rem;
 }
 
-.button {
+nav {
   text-align: center;
   /* height: 5rem; */
   padding: 2rem;
 }
-.btn {
+button {
   height: 3rem;
   width: 10rem;
 }
@@ -78,3 +78,21 @@ form {
    padding-top: 1rem;
 
  }
+
+ .confirm-button {
+   opacity: 0;
+
+ }
+
+ .confirm {
+  text-align: center;
+  /* height: 5rem; */
+  padding: 2rem;
+ }
+
+ .btn-confirm {
+   height: 3rem;
+  width: 10rem;
+
+ }
+

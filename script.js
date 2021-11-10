@@ -1,12 +1,15 @@
 "use strict";
 
 const bellCurve = () => Math.trunc(Math.random() * 6 + 1) * 3;
-const clickedBtn = document.querySelector(".btn");
-const showInfo = document.querySelector(".btn");
+const clickedBtn = document.querySelector(".btn-start");
+const confirmDiv = document.querySelector(".btn-start");
+const confirmBtn = document.querySelector(".btn-start");
+const showInfo = document.querySelector(".btn-confirm");
 const generatorContainer = document.getElementById("generator");
 
 document.querySelector(".btn-start").addEventListener("click", function () {
   clickedBtn.classList.add("btn-start-after");
+ 
   // clears the created element upon each "click"
   generatorContainer.innerHTML = "";
   let containerGen = document.createElement("form");
@@ -33,6 +36,13 @@ document.querySelector(".btn-start").addEventListener("click", function () {
   let charisma = document.createElement("li");
   charisma.innerHTML = `Charisma: ${bellCurve()}`;
   attributes.append(charisma);
+  let buttonNav = document.createElement("nav");
+  confirmDiv.classList.add("confirm");
+  generatorContainer.append(buttonNav);
+  let button = document.createElement("button");
+  button.innerHTML = "Confirm!"
+  buttonNav.append(button);
+  confirmBtn.classList.add(".btn-confirm")
 
   generatorContainer.append(containerGen);
 
