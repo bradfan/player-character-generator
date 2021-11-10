@@ -53,13 +53,12 @@ button {
   border-radius: 10px;
   height: 5rem;
   width: 20rem;
-  font-family:MedievalSharp;
+  font-family: MedievalSharp;
   background-color: aqua;
-  
 }
 
 .btn-start {
-  font-size:2rem;
+  font-size: 2rem;
 }
 
 .btn-start-after {
@@ -69,38 +68,58 @@ button {
 form {
   font-size: 2rem;
   padding: 2rem 0rem 0rem 2rem;
-
 }
 
- h3 {
-   padding-bottom: 1rem;
+h3 {
+  padding-bottom: 1rem;
+}
 
- }
+ul {
+  list-style: none;
+}
 
- ul {
-   list-style: none;
+li {
+  padding-top: 1rem;
+  font-weight: bold;
+}
 
- }
-
- li {
-   padding-top: 1rem;
-
- }
-
- .btn-confirm {
-   /* opacity: 0; */
-
- }
-
- .confirm {
+.confirm {
   text-align: center;
   /* height: 5rem; */
   padding: 2rem;
- }
+}
 
- .btn-confirm {
-   /* height: 3rem;
+.btn-confirm {
+  /* height: 3rem;
   width: 10rem;
    background-color:red; */
- }
+}
 
+.btn-confirm-after {
+   opacity: 0;
+}
+
+.container-info {
+
+}
+
+.name-box {
+
+}
+
+.name-input {
+  border-radius: 10px;
+  height: 5rem;
+  width: 20rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: MedievalSharp;
+  
+}
+
+.btn-name {
+  width: 10rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
