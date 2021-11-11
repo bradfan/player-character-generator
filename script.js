@@ -1,6 +1,9 @@
 "use strict";
 
-const bellCurve = () => Math.trunc(Math.random() * 6 + 1) + Math.trunc(Math.random() * 6 + 1) + Math.trunc(Math.random() * 6 + 1);
+const bellCurve = () =>
+  Math.trunc(Math.random() * 6 + 1) +
+  Math.trunc(Math.random() * 6 + 1) +
+  Math.trunc(Math.random() * 6 + 1);
 const clickedBtn = document.querySelector(".btn-start");
 const hideHeader = document.querySelector(".header");
 const generatorContainer = document.getElementById("generator");
@@ -104,7 +107,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
       fighterBtn.name = "profession";
       fighterBtn.onclick = "formFunction(this.value)";
       fighterBtn.value = "Fighter";
-      
+
       classForm.append(fighterBtn);
 
       let palladinBtn = document.createElement("input");
@@ -116,7 +119,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
       palladinBtn.name = "profession";
       palladinBtn.onclick = "formFunction(this.value)";
       palladinBtn.value = "Palladin";
-      
+
       classForm.append(palladinBtn);
 
       let rangerBtn = document.createElement("input");
@@ -202,40 +205,34 @@ document.querySelector(".btn-start").addEventListener("click", function () {
       assasinBtn.value = "Assasin";
 
       classForm.append(assasinBtn);
-      
-      
 
       let submitClass = document.createElement("input");
-      submitClass.type="text";
-      submitClass.id="result";
-      submitClass.placeholder="Your selection."
+      submitClass.type = "text";
+      submitClass.id = "result";
+      submitClass.placeholder = "Your selection.";
       classForm.append(submitClass);
       let submitClass2 = document.createElement("input");
-      submitClass2.type="submit";
-      submitClass2.value="Submit class";
+      submitClass2.type = "submit";
+      submitClass2.value = "Submit class";
 
-      
       classForm.append(submitClass2);
-     
+
       // this function (also saved in sandbox) returns cannot read properties of null. It works in standard html/js but not dynamically. It may be out of place.
       // function formFunction(profession) {
       //   console.log("Profession", profession);
       //   document.getElementById("result").value = profession;
       // }
-      
-
 
       infoContainer.append(classForm);
-      
+
       // document.querySelector('.class').addEventListener('submit', function() {
       //   let classVar = document.getElementsByName("class").value;
       //   let charClass = document.createElement("h2");
       //   charClass.setAttribute("class", "class-title");
-        
+
       //   charClass.innerHTML = `Name: ${classVar}`;
       //   nameBox.append(charClass);
       // })
-
     });
   });
 });
@@ -247,6 +244,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 // look for where we can eliminate and simplify code. this function is getting huge. I could not get the addEventlisteners to fire when the querySelectors were not nested.
 
 // next, build a document.querySelector off the confirm button to display the data for the "info" div. build in prompts (?) for the user to input name, class and race. push changes IN PROGRESS
+// get rid of radio buttons and use input from User. too much code and the radio buttons aren't working.
 
 // look into removing elements once they are no longer neccesary
 
