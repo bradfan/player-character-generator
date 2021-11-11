@@ -1,6 +1,6 @@
 "use strict";
 
-const bellCurve = () => Math.trunc(Math.random() * 6 + 1) * 3;
+const bellCurve = () => Math.trunc(Math.random() * 6 + 1) + Math.trunc(Math.random() * 6 + 1) + Math.trunc(Math.random() * 6 + 1);
 const clickedBtn = document.querySelector(".btn-start");
 const hideHeader = document.querySelector(".header");
 const generatorContainer = document.getElementById("generator");
@@ -94,14 +94,15 @@ document.querySelector(".btn-start").addEventListener("click", function () {
       classPrompt.setAttribute("class", "class-title");
       classPrompt.innerHTML = "Choose which class your character is";
       classForm.append(classPrompt);
+
       let fighterBtn = document.createElement("input");
       let fighterBtnLbl = document.createElement("label");
       fighterBtnLbl.for = "fighterBtn";
       fighterBtnLbl.innerHTML = "Fighter  ";
       classForm.append(fighterBtnLbl);
       fighterBtn.type = "radio";
-      fighterBtn.id = "fighter";
-      fighterBtn.name = "class";
+      fighterBtn.name = "profession";
+      fighterBtn.onclick = "formFunction(this.value)";
       fighterBtn.value = "Fighter";
       
       classForm.append(fighterBtn);
@@ -112,8 +113,8 @@ document.querySelector(".btn-start").addEventListener("click", function () {
       palladinBtnLbl.innerHTML = "Palladin  ";
       classForm.append(palladinBtnLbl);
       palladinBtn.type = "radio";
-      palladinBtn.id = "palladin";
-      palladinBtn.name = "class";
+      palladinBtn.name = "profession";
+      palladinBtn.onclick = "formFunction(this.value)";
       palladinBtn.value = "Palladin";
       
       classForm.append(palladinBtn);
@@ -124,8 +125,8 @@ document.querySelector(".btn-start").addEventListener("click", function () {
       rangerBtnLbl.innerHTML = "Ranger  ";
       classForm.append(rangerBtnLbl);
       rangerBtn.type = "radio";
-      rangerBtn.id = "ranger";
-      rangerBtn.name = "class";
+      rangerBtn.name = "profession";
+      rangerBtn.onclick = "formFunction(this.value)";
       rangerBtn.value = "Ranger";
 
       classForm.append(rangerBtn);
@@ -136,8 +137,8 @@ document.querySelector(".btn-start").addEventListener("click", function () {
       clericBtnLbl.innerHTML = "Cleric  ";
       classForm.append(clericBtnLbl);
       clericBtn.type = "radio";
-      clericBtn.id = "cleric";
-      clericBtn.name = "class";
+      clericBtn.name = "profession";
+      clericBtn.onclick = "formFunction(this.value)";
       clericBtn.value = "Cleric";
 
       classForm.append(clericBtn);
@@ -148,8 +149,8 @@ document.querySelector(".btn-start").addEventListener("click", function () {
       druidBtnLbl.innerHTML = "Druid  ";
       classForm.append(druidBtnLbl);
       druidBtn.type = "radio";
-      druidBtn.id = "druid";
-      druidBtn.name = "class";
+      druidBtn.name = "profession";
+      druidBtn.onclick = "formFunction(this.value)";
       druidBtn.value = "druid";
 
       classForm.append(druidBtn);
@@ -160,8 +161,8 @@ document.querySelector(".btn-start").addEventListener("click", function () {
       magicUserBtnLbl.innerHTML = "Magic-User  ";
       classForm.append(magicUserBtnLbl);
       magicUserBtn.type = "radio";
-      magicUserBtn.id = "magicUser";
-      magicUserBtn.name = "class";
+      magicUserBtn.name = "profession";
+      magicUserBtn.onclick = "formFunction(this.value)";
       magicUserBtn.value = "MagicUser";
 
       classForm.append(magicUserBtn);
@@ -172,8 +173,8 @@ document.querySelector(".btn-start").addEventListener("click", function () {
       illusionistBtnLbl.innerHTML = "Illusionist  ";
       classForm.append(illusionistBtnLbl);
       illusionistBtn.type = "radio";
-      illusionistBtn.id = "illusionist";
-      illusionistBtn.name = "class";
+      illusionistBtn.name = "profession";
+      illusionistBtn.onclick = "formFunction(this.value)";
       illusionistBtn.value = "Illusionist";
 
       classForm.append(illusionistBtn);
@@ -184,8 +185,8 @@ document.querySelector(".btn-start").addEventListener("click", function () {
       thiefBtnLbl.innerHTML = "Thief  ";
       classForm.append(thiefBtnLbl);
       thiefBtn.type = "radio";
-      thiefBtn.id = "thief";
-      thiefBtn.name = "class";
+      thiefBtn.name = "profession";
+      thiefBtn.onclick = "formFunction(this.value)";
       thiefBtn.value = "Thief";
 
       classForm.append(thiefBtn);
@@ -196,15 +197,45 @@ document.querySelector(".btn-start").addEventListener("click", function () {
       assasinBtnLbl.innerHTML = "Assasin  ";
       classForm.append(assasinBtnLbl);
       assasinBtn.type = "radio";
-      assasinBtn.id = "assasin";
-      assasinBtn.name = "class";
+      assasinBtn.name = "profession";
+      assasinBtn.onclick = formFunction(this.value);
       assasinBtn.value = "Assasin";
 
       classForm.append(assasinBtn);
       
       
 
+      let submitClass = document.createElement("input");
+      submitClass.type="text";
+      submitClass.id="result";
+      submitClass.placeholder="Your selection."
+      classForm.append(submitClass);
+      let submitClass2 = document.createElement("input");
+      submitClass2.type="submit";
+      submitClass2.value="Submit class";
+
+      
+      classForm.append(submitClass2);
+     
+      // this function (also saved in sandbox) returns cannot read properties of null. It works in standard html/js but not dynamically. It may be out of place.
+      // function formFunction(profession) {
+      //   console.log("Profession", profession);
+      //   document.getElementById("result").value = profession;
+      // }
+      
+
+
       infoContainer.append(classForm);
+      
+      // document.querySelector('.class').addEventListener('submit', function() {
+      //   let classVar = document.getElementsByName("class").value;
+      //   let charClass = document.createElement("h2");
+      //   charClass.setAttribute("class", "class-title");
+        
+      //   charClass.innerHTML = `Name: ${classVar}`;
+      //   nameBox.append(charClass);
+      // })
+
     });
   });
 });
