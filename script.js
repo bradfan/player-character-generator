@@ -72,42 +72,76 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     // nameInput.value = text;
     nameBox.append(nameInput);
     let nameBtn = document.createElement("button");
-    nameBtn.setAttribute("class", "btn-name");
+    nameBtn.setAttribute("class", "btn-dynamic");
     nameBtn.innerHTML = "Submit";
     nameBtn.id = "name-submit";
     nameBox.append(nameBtn);
     infoContainer.append(containerInfo);
 
-    document.querySelector(".btn-name").addEventListener("click", function () {
-      let nameVar = document.getElementById("name-input").value;
-      let charName = document.createElement("h2");
-      charName.setAttribute("class", "name-title");
-      if (nameVar == "") return alert("You must enter a name.");
-      charName.innerHTML = `Name: ${nameVar}`;
-      nameBox.append(charName);
+    document.querySelector("#name-submit").addEventListener("click", function () {
+        let nameVar = document.getElementById("name-input").value;
+        let charName = document.createElement("h2");
+        charName.setAttribute("class", "name-title");
+        if (nameVar == "") return alert("You must enter a name.");
+        charName.innerHTML = `Name: ${nameVar}`;
+        nameBox.append(charName);
+        const inputOne = document.getElementById("name-input");
+        inputOne.remove();
+        const submitOne = document.getElementById("name-submit");
+        submitOne.remove();
+        let classBox = document.createElement("div");
+        classBox.id = "#info-box";
+        classBox.setAttribute("class", "uniform");
+        containerInfo.append(classBox);
+        let classInput = document.createElement("input");
+        classInput.setAttribute("class", "class-input");
+        classInput.type = "text";
+        classInput.id = "class-input";
+        classInput.placeholder = "Please enter class";
+        classInput.name = "class-input";
+        classBox.append(classInput);
+        let classBtn = document.createElement("button");
+        classBtn.setAttribute("class", "btn-dynamic");
+        classBtn.type = "submit";
+        classBtn.id = "class-submit";
+        classBtn.innerHTML = "Submit";
+        classBox.append(classBtn);
 
-      const clickedName = document.querySelector(".btn-name");
-      clickedName.classList.add("btn-name-after");
-      const clickedInput = document.querySelector(".name-input");
-      clickedInput.classList.add("name-input-after");
-      let classForm = document.createElement("div");
-      classForm.id = "#info-box";
-      classForm.setAttribute("class", "uniform");
-      let classPrompt = document.querySelector("h3");
-      classPrompt.setAttribute("class", "class-title");
-      classPrompt.innerHTML = "Choose which class your character is:";
-      classForm.append(classPrompt);
-      let classInput = document.querySelector("input");
-      classInput.setAttribute("class", "class-input");
-      // classInput.innerHTML = "";
-      classInput.type = "text";
-      classInput.id = "class-input";
-      classInput.placeholder = "Please enter class";
-      classInput.name = "class-input";
-      classForm.append(classInput);
+        infoContainer.append(containerInfo);
 
-      infoContainer.append(classForm);
-    });
+        document.querySelector("#class-submit").addEventListener("click", function () {
+          let classVar = document.getElementById("class-input").value;
+          let charClass = document.createElement("h2");
+          charClass.setAttribute("class", "class-title");
+          if (classVar == "") return alert("You must enter a class.");
+          charClass.innerHTML = `Class: ${classVar}`;
+          classBox.append(charClass);
+          const inputTwo = document.getElementById("class-input");
+          inputTwo.remove();
+          const submitTwo = document.getElementById("class-submit");
+          submitTwo.remove();
+          let raceBox = document.createElement("div");
+          raceBox.id = "#info-box";
+          raceBox.setAttribute("class", "uniform");
+          containerInfo.append(raceBox);
+          let raceInput = document.createElement("input");
+          raceInput.setAttribute("class", "race-input");
+          raceInput.type = "text";
+          raceInput.id = "race-input";
+          raceInput.placeholder = "Please enter race";
+          raceInput.name = "race-input";
+          raceBox.append(raceInput);
+          let raceBtn = document.createElement("button");
+          raceBtn.setAttribute("class", "btn-dynamic");
+          raceBtn.type = "submit";
+          raceBtn.id = "race-submit";
+          raceBtn.innerHTML = "Submit";
+          raceBox.append(raceBtn);
+  
+          infoContainer.append(containerInfo);
+        });
+      });
+
   });
 });
 

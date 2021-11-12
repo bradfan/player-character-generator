@@ -124,7 +124,7 @@ li {
   
 }
 
-.name-input {
+input {
   border-radius: 10px;
   height: 5rem;
   width: 20rem;
@@ -139,7 +139,7 @@ li {
   opacity: 0;
 }
 
-.btn-name {
+.btn-dynamic {
   width: 10rem;
   font-size: 2rem;
   font-weight: bold;
@@ -149,7 +149,7 @@ li {
   opacity: 0;
 }
 
-.name-title {
+/* .name-title {
   font-size: 2rem;
   font-weight: bold;
-}
+} */
