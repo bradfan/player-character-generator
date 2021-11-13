@@ -139,6 +139,38 @@ document.querySelector(".btn-start").addEventListener("click", function () {
           raceBox.append(raceBtn);
   
           infoContainer.append(containerInfo);
+
+          document.querySelector("#race-submit").addEventListener("click", function () {
+            let raceVar = document.getElementById("race-input").value;
+            let charRace = document.createElement("h2");
+            charRace.setAttribute("class", "class-title");
+            if (raceVar == "") return alert("You must enter a race.");
+            charClass.innerHTML = `Race: ${raceVar}`;
+            raceBox.append(charRace);
+            const inputThree = document.getElementById("race-input");
+            inputThree.remove();
+            const submitThree = document.getElementById("race-submit");
+            submitThree.remove();
+            let sexBox = document.createElement("div");
+            sexBox.id = "#info-box";
+            sexBox.setAttribute("class", "uniform");
+            containerInfo.append(sexBox);
+            let sexInput = document.createElement("input");
+            sexInput.setAttribute("class", "sex-input");
+            sexInput.type = "text";
+            sexInput.id = "sex-input";
+            sexInput.placeholder = "Please enter sex";
+            sexInput.name = "sex-input";
+            sexBox.append(sexInput);
+            let sexBtn = document.createElement("button");
+            sexBtn.setAttribute("class", "btn-dynamic");
+            sexBtn.type = "submit";
+            sexBtn.id = "sex-submit";
+            sexBtn.innerHTML = "Submit";
+            sexBox.append(sexBtn);
+    
+            infoContainer.append(containerInfo);
+          });
         });
       });
 
@@ -147,16 +179,15 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 
 // use setAttribute to set classes for buttons individually. replace "nav" with "div" and change CSS to individual classes and not element tags.  push changes 11/10
 
-// remove classList items where neccesary. push changes 11/10
+// look at the remove element() to find out why Race is writing over Class
 
 // look for where we can eliminate and simplify code. this function is getting huge. I could not get the addEventlisteners to fire when the querySelectors were not nested.
 
-// next, build a document.querySelector off the confirm button to display the data for the "info" div. build in prompts (?) for the user to input name, class and race. push changes IN PROGRESS
-// get rid of radio buttons and use input from User. too much code and the radio buttons aren't working.
+
 
 // look into removing elements once they are no longer neccesary
 
-// ATTRIBUTES IS BEING COVERED UP CONTAINERiNFO(/)
+
 
 // css the info div to move laterally across the page. look at display for info-large and containerInfo. push changes
 
