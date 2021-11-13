@@ -70,7 +70,7 @@ button {
   display: none;
 }
 
-.uniform {
+.attributes {
   font-size: 2rem;
   padding: 2rem 0rem 0rem 2rem;
   /* border: 3px solid black;
@@ -108,20 +108,21 @@ li {
    opacity: 0;
 }
 
-.info-large {
-  display: inline-block;
+.info {
+  display: flex;
+ justify-content: flex-start;
+  /* width: 100%; */
   
-  width: 100%;
 }
 
 .container-info {
-  /* display: inline-block;
   
-  width: 100%; */
+  /* width: 100%; */
 }
 
 #info-box {
-  
+
+  /* width: 20%; */
 }
 
 input {
