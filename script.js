@@ -172,62 +172,62 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 
     infoContainer.append(containerInfo);
 
-    // document
-    //   .querySelector("#name-submit")
-    //   .addEventListener("click", function () {
-    //     let nameVar = document.getElementById("name-input").value;
-    //     let charName = document.createElement("h2");
-    //     charName.setAttribute("class", "name-title");
-    //     if (nameVar == "") return alert("You must enter a name.");
-    //     charName.innerHTML = `Name: ${nameVar}`;
-    //     nameBox.append(charName);
+    document.querySelector("#name-submit").addEventListener("click", function () {
+        let nameVar = document.getElementById("name-input").value;
+        let charName = document.createElement("h2");
+        charName.setAttribute("class", "name-title");
+        if (nameVar == "") return alert("You must enter a name.");
+        charName.innerHTML = `Name: ${nameVar}`;
+        nameBox.append(charName);
+        const inputOne = document.getElementById("input-box");
+        inputOne.remove();
+      });
 
-    //     const inputOne = document.getElementById("input-box");
-    //     inputOne.remove();
-    //
-    //
+      document.querySelector("#class-submit").addEventListener("click", function () {
+        let classVar = document.getElementById("class-input").value;
+        let charClass = document.createElement("h2");
+        charClass.setAttribute("class", "class-title");
+        if (classVar == "") return alert("You must enter a class.");
+        charClass.innerHTML = `Class: ${classVar}`;
+        classBox.append(charClass);
+        const inputTwo = document.getElementById("input-box2");
+        inputTwo.remove();
+      });
 
-    //     infoContainer.append(containerInfo);
+      document.querySelector("#race-submit").addEventListener("click", function () {
+        let raceVar = document.getElementById("race-input").value;
+        let charRace = document.createElement("h2");
+        charRace.setAttribute("class", "race-title");
+        if (raceVar == "") return alert("You must enter a race.");
+        charRace.innerHTML = `Race: ${raceVar}`;
+        raceBox.append(charRace);
+        const inputThree = document.getElementById("input-box3");
+        inputThree.remove();
+      });
 
-    //     document
-    //       .querySelector("#class-submit")
-    //       .addEventListener("click", function () {
-    //         let classVar = document.getElementById("class-input").value;
-    //         let charClass = document.createElement("h2");
-    //         charClass.setAttribute("class", "class-title");
-    //         if (classVar == "") return alert("You must enter a class.");
-    //         charClass.innerHTML = `Class: ${classVar}`;
-    //         classBox.append(charClass);
+      document.querySelector("#sex-submit").addEventListener("click", function () {
+        let sexVar = document.getElementById("sex-input").value;
+        let charSex = document.createElement("h2");
+        charSex.setAttribute("class", "sex-title");
+        if (sexVar == "") return alert("You must enter a sex.");
+        charSex.innerHTML = `Sex: ${sexVar}`;
+        sexBox.append(charSex);
+        const inputFour = document.getElementById("input-box4");
+        inputFour.remove();
+      });
 
-    //         const inputTwo = document.getElementById("input-box2");
-    //         inputTwo.remove();
+      document.querySelector("#alignment-submit").addEventListener("click", function () {
+        let alignmentVar = document.getElementById("alignment-input").value;
+        let charAlignment = document.createElement("h2");
+        charAlignment.setAttribute("class", "alignment-title");
+        if (alignmentVar == "") return alert("You must enter a sex.");
+        charAlignment.innerHTML = `Sex: ${alignmentVar}`;
+        alignmentBox.append(charAlignment);
+        const inputFive = document.getElementById("input-box5");
+        inputFive.remove();
+      });
 
-    //
-
-    //
-
-    //         // infoContainer.append(containerInfo);
-
-    //         document
-    //           .querySelector("#race-submit")
-    //           .addEventListener("click", function () {
-    //             let raceVar = document.getElementById("race-input").value;
-    //             let charRace = document.createElement("h2");
-    //             charRace.setAttribute("class", "class-title");
-    //             if (raceVar == "") return alert("You must enter a race.");
-    //             charClass.innerHTML = `Race: ${raceVar}`;
-    //             raceBox.append(charRace);
-    //             const inputThree = document.getElementById("race-input");
-    //             inputThree.remove();
-
-    //
-    //
-
-    //             infoContainer.append(containerInfo);
-    //           });
-    //       });
-    //   });
-  });
+    });
 });
 
 // use setAttribute to set classes for buttons individually. replace "nav" with "div" and change CSS to individual classes and not element tags.  push changes 11/10

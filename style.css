@@ -78,13 +78,15 @@ input {
   font-size: 2rem;
   font-weight: bold;
   font-family: MedievalSharp;
-  background-color:rgb(174, 195, 195);
+  background-color: lightblue;
+  color: white;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 input:hover {
  background-color:white;
  transform: scale(1.05);
+ color: black;
 }
 
 .btn-start {
