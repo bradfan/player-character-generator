@@ -59,10 +59,10 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     clickedConfirm.classList.add("btn-confirm-after");
     let containerInfo = document.createElement("div");
     containerInfo.setAttribute("class", "container-info");
+
     let nameBox = document.createElement("div");
-    nameBox.id = "info-box";
-    nameBox.setAttribute("class", "uniform");
-    containerInfo.append(nameBox);
+    // nameBox.id = "info-box";
+    // nameBox.setAttribute("class", "uniform");
     let inputBox = document.createElement("div");
     inputBox.id = "input-box";
     nameBox.append(inputBox);
@@ -75,18 +75,20 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     inputBox.appendChild(nameInput);
     let nameBtn = document.createElement("button");
     nameBtn.setAttribute("class", "btn-dynamic");
-    nameBtn.innerHTML = "Submit";
+    nameBtn.innerHTML = "Confirm";
     nameBtn.id = "name-submit";
     inputBox.append(nameBtn);
+    containerInfo.append(nameBox);
+    
     
 
     let classBox = document.createElement("div");
-    classBox.id = "#info-box";
+    // classBox.id = "#info-box";
     // classBox.setAttribute("class", "uniform");
-    containerInfo.append(classBox);
+   
     let inputBox2 = document.createElement("div");
     inputBox2.id = "input-box2";
-    nameBox.append(inputBox2);
+    classBox.append(inputBox2);
     let classInput = document.createElement("input");
     classInput.setAttribute("class", "class-input");
     classInput.type = "text";
@@ -98,15 +100,16 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     classBtn.setAttribute("class", "btn-dynamic");
     classBtn.type = "submit";
     classBtn.id = "class-submit";
-    classBtn.innerHTML = "Submit";
+    classBtn.innerHTML = "Confirm";
     inputBox2.append(classBtn);
+    containerInfo.append(classBox);
 
     let raceBox = document.createElement("div");
-    raceBox.id = "#info-box";
+    // raceBox.id = "#info-box";
     // raceBox.setAttribute("class", "uniform");
-    containerInfo.append(raceBox);
+    
     let inputBox3 = document.createElement("div");
-    inputBox3.id = "input-box2";
+    inputBox3.id = "input-box3";
     raceBox.append(inputBox3);
     let raceInput = document.createElement("input");
     raceInput.setAttribute("class", "race-input");
@@ -119,16 +122,17 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     raceBtn.setAttribute("class", "btn-dynamic");
     raceBtn.type = "submit";
     raceBtn.id = "race-submit";
-    raceBtn.innerHTML = "Submit";
+    raceBtn.innerHTML = "Confirm";
     inputBox3.append(raceBtn);
+    containerInfo.append(raceBox);
 
     let sexBox = document.createElement("div");
-    sexBox.id = "#info-box";
+    // sexBox.id = "#info-box";
     // sexBox.setAttribute("class", "uniform");
-    containerInfo.append(sexBox);
+    
     let inputBox4 = document.createElement("div");
     inputBox4.id = "input-box4";
-    raceBox.append(inputBox4);
+    sexBox.append(inputBox4);
     let sexInput = document.createElement("input");
     sexInput.setAttribute("class", "sex-input");
     sexInput.type = "text";
@@ -140,16 +144,17 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     sexBtn.setAttribute("class", "btn-dynamic");
     sexBtn.type = "submit";
     sexBtn.id = "sex-submit";
-    sexBtn.innerHTML = "Submit";
+    sexBtn.innerHTML = "Confirm";
     inputBox4.append(sexBtn);
+    containerInfo.append(sexBox);
 
     let alignmentBox = document.createElement("div");
-    alignmentBox.id = "#info-box";
+    // alignmentBox.id = "#info-box";
     // alignmentBox.setAttribute("class", "uniform");
-    containerInfo.append(alignmentBox);
+    
     let inputBox5 = document.createElement("div");
     inputBox5.id = "input-box5";
-    raceBox.append(inputBox5);
+    alignmentBox.append(inputBox5);
     let alignmentInput = document.createElement("input");
     alignmentInput.setAttribute("class", "alignment-input");
     alignmentInput.type = "text";
@@ -161,8 +166,9 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     alignmentBtn.setAttribute("class", "btn-dynamic");
     alignmentBtn.type = "submit";
     alignmentBtn.id = "alignment-submit";
-    alignmentBtn.innerHTML = "Submit";
+    alignmentBtn.innerHTML = "Confirm";
     inputBox5.append(alignmentBtn);
+    containerInfo.append(alignmentBox);
 
     infoContainer.append(containerInfo);
 
