@@ -12,9 +12,10 @@ const infoContainer = document.getElementById("info");
 
 document.querySelector(".btn-start").addEventListener("click", function () {
   hideHeader.classList.add("header-after");
-  clickedBtn.classList.add("btn-start-after");
   // clears the created element upon each "click"
   generatorContainer.innerHTML = "";
+  const startRemove = document.getElementById("start-nav");
+  startRemove.remove();
   let containerGen = document.createElement("form");
   containerGen.setAttribute("class", "attributes");
   const description = document.createElement("h3");
@@ -42,6 +43,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
   attributes.append(charisma);
   let buttonDiv = document.createElement("div");
   buttonDiv.setAttribute("class", "confirm");
+  buttonDiv.id="confirm";
   generatorContainer.append(buttonDiv);
   let button = document.createElement("button");
   button.setAttribute("class", "btn-confirm");
@@ -56,13 +58,15 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 
   document.querySelector(".btn-confirm").addEventListener("click", function () {
     const clickedConfirm = document.querySelector(".btn-confirm");
-    clickedConfirm.classList.add("btn-confirm-after");
+    
+    const confirmRemove = document.getElementById("confirm");
+    confirmRemove.remove();
     let containerInfo = document.createElement("div");
     containerInfo.setAttribute("class", "container-info");
 
     let nameBox = document.createElement("div");
     // nameBox.id = "info-box";
-    // nameBox.setAttribute("class", "uniform");
+    nameBox.setAttribute("class", "uniform");
     let inputBox = document.createElement("div");
     inputBox.id = "input-box";
     nameBox.append(inputBox);
@@ -84,7 +88,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 
     let classBox = document.createElement("div");
     // classBox.id = "#info-box";
-    // classBox.setAttribute("class", "uniform");
+    classBox.setAttribute("class", "uniform");
    
     let inputBox2 = document.createElement("div");
     inputBox2.id = "input-box2";
@@ -106,7 +110,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 
     let raceBox = document.createElement("div");
     // raceBox.id = "#info-box";
-    // raceBox.setAttribute("class", "uniform");
+    raceBox.setAttribute("class", "uniform");
     
     let inputBox3 = document.createElement("div");
     inputBox3.id = "input-box3";
@@ -128,7 +132,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 
     let sexBox = document.createElement("div");
     // sexBox.id = "#info-box";
-    // sexBox.setAttribute("class", "uniform");
+    sexBox.setAttribute("class", "uniform");
     
     let inputBox4 = document.createElement("div");
     inputBox4.id = "input-box4";
@@ -150,7 +154,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 
     let alignmentBox = document.createElement("div");
     // alignmentBox.id = "#info-box";
-    // alignmentBox.setAttribute("class", "uniform");
+    alignmentBox.setAttribute("class", "uniform");
     
     let inputBox5 = document.createElement("div");
     inputBox5.id = "input-box5";
@@ -220,8 +224,8 @@ document.querySelector(".btn-start").addEventListener("click", function () {
         let alignmentVar = document.getElementById("alignment-input").value;
         let charAlignment = document.createElement("h2");
         charAlignment.setAttribute("class", "alignment-title");
-        if (alignmentVar == "") return alert("You must enter a sex.");
-        charAlignment.innerHTML = `Sex: ${alignmentVar}`;
+        if (alignmentVar == "") return alert("You must enter an alignment.");
+        charAlignment.innerHTML = `Alignment: ${alignmentVar}`;
         alignmentBox.append(charAlignment);
         const inputFive = document.getElementById("input-box5");
         inputFive.remove();
@@ -230,16 +234,14 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     });
 });
 
-// use setAttribute to set classes for buttons individually. replace "nav" with "div" and change CSS to individual classes and not element tags.  push changes 11/10
 
-// look at the remove element() to find out why Race is writing over Class
-
-// look for where we can eliminate and simplify code. this function is getting huge. I could not get the addEventlisteners to fire when the querySelectors were not nested.
-
-// look into removing elements once they are no longer neccesary
-
-// css the info div to move laterally across the page. look at display for info-large and containerInfo. push changes
 
 // assign background images based on chosen class. push changes
 
 // refactor a "refresh page" feature instead of telling the user to refresh the page if they get a fuckTard. push changes
+
+// replace "inputs" and "buttons" with drop down menus(?)
+
+// Add Level, XP, HP and Currency to Div above attributes
+
+// turn header after into a cool banner
