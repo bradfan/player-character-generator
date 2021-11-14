@@ -11,7 +11,10 @@ const infoContainer = document.getElementById("info");
 // infoContainer.setAttribute("class", "info-large");
 
 document.querySelector(".btn-start").addEventListener("click", function () {
-  hideHeader.classList.add("header-after");
+  // hideHeader.setAttribute("class", "header-after");
+  // const removeBanner = document.getElementById("header-title");
+  // removeBanner.remove();
+  // hideHeader.classList.add("header-after");
   // clears the created element upon each "click"
   generatorContainer.innerHTML = "";
   const startRemove = document.getElementById("start-nav");
@@ -229,6 +232,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
         alignmentBox.append(charAlignment);
         const inputFive = document.getElementById("input-box5");
         inputFive.remove();
+        
       });
 
     });
