@@ -97,6 +97,20 @@ input {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
+select {
+  border-radius: 10px;
+  border: none;
+  height: 5rem;
+  width: 15rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: MedievalSharp;
+  background-color: lightblue;
+  color: white;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
 input:hover {
  background-color:white;
  transform: scale(1.05);

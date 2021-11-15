@@ -88,6 +88,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     containerInfo.append(nameBox);
     
     
+    
 
     let classBox = document.createElement("div");
     // classBox.id = "#info-box";
@@ -96,19 +97,37 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     let inputBox2 = document.createElement("div");
     inputBox2.id = "input-box2";
     classBox.append(inputBox2);
-    let classInput = document.createElement("input");
+    
+   
+    let values = ["fighter", "palladin", "ranger", "cleric", 'druid', 'magic-user', 'illusionist', 'thief', 'assassin'];
+
+    let classInput = document.createElement("select");
     classInput.setAttribute("class", "class-input");
-    classInput.type = "text";
+    // classInput.type = "text";
     classInput.id = "class-input";
-    classInput.placeholder = "Class";
+    // classInput.placeholder = "Class";
     classInput.name = "class-input";
+
+    for (const val of values){
+        var option = document.createElement("option");
+        option.value = val;
+        option.text = val.charAt(0).toUpperCase() + val.slice(1);
+        classBox.appendChild(option);
+    }
+
+    const classLabel = document.createElement("label");
+    classLabel.innerHTML = "Choose your Class: "
+    classLabel.htmlFor = "class";
+
+    inputBox2.append(classLabel)
     inputBox2.append(classInput);
-    let classBtn = document.createElement("button");
-    classBtn.setAttribute("class", "btn-dynamic");
-    classBtn.type = "submit";
-    classBtn.id = "class-submit";
-    classBtn.innerHTML = "Confirm";
-    inputBox2.append(classBtn);
+    // let classBtn = document.createElement("button");
+    // classBtn.setAttribute("class", "btn-dynamic");
+    // classBtn.type = "submit";
+    // classBtn.id = "class-submit";
+    // classBtn.innerHTML = "Confirm";
+
+    // inputBox2.append(classBtn);
     containerInfo.append(classBox);
 
     let raceBox = document.createElement("div");
@@ -190,16 +209,16 @@ document.querySelector(".btn-start").addEventListener("click", function () {
         inputOne.remove();
       });
 
-      document.querySelector("#class-submit").addEventListener("click", function () {
-        let classVar = document.getElementById("class-input").value;
-        let charClass = document.createElement("h2");
-        charClass.setAttribute("class", "class-title");
-        if (classVar == "") return alert("You must enter a class.");
-        charClass.innerHTML = `Class: ${classVar}`;
-        classBox.append(charClass);
-        const inputTwo = document.getElementById("input-box2");
-        inputTwo.remove();
-      });
+      // document.querySelector("#class-submit").addEventListener("click", function () {
+      //   let classVar = document.getElementById("class-input").value;
+      //   let charClass = document.createElement("h2");
+      //   charClass.setAttribute("class", "class-title");
+      //   if (classVar == "") return alert("You must enter a class.");
+      //   charClass.innerHTML = `Class: ${classVar}`;
+      //   classBox.append(charClass);
+      //   const inputTwo = document.getElementById("input-box2");
+      //   inputTwo.remove();
+      // });
 
       document.querySelector("#race-submit").addEventListener("click", function () {
         let raceVar = document.getElementById("race-input").value;
