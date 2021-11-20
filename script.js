@@ -283,12 +283,14 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 
 
 
-// assign background images based on chosen class. push changes
+// add classes like fighter/Magic-user push changes
+
+// restrict alignments, race etc such as palladin is lawful good etc.
 
 // refactor a "refresh page" feature instead of telling the user to refresh the page if they get a fuckTard. push changes
 
-// replace "inputs" and "buttons" with drop down menus(?)
+// 
 
 // Add Level, XP, HP and Currency to Div above attributes
 
-// turn header after into a cool banner
+// 
