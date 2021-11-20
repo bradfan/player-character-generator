@@ -86,21 +86,15 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     nameBtn.id = "name-submit";
     inputBox.append(nameBtn);
     containerInfo.append(nameBox);
-    
-    
-    
 
     let classBox = document.createElement("div");
     // classBox.id = "#info-box";
     classBox.setAttribute("class", "uniform");
-   
     let inputBox2 = document.createElement("div");
     inputBox2.id = "input-box2";
     classBox.append(inputBox2);
-    
-   
-    let values = ["fighter", "palladin", "ranger", "cleric", 'druid', 'magic-user', 'illusionist', 'thief', 'assassin'];
 
+    let values = ["Fighter", "Palladin", "Ranger", "Cleric", 'Druid', 'Magic-user', 'Illusionist', 'Thief', 'Assassin'];
     let classInput = document.createElement("select");
     classInput.setAttribute("class", "class-input");
     // classInput.type = "text";
@@ -112,24 +106,22 @@ document.querySelector(".btn-start").addEventListener("click", function () {
         var option = document.createElement("option");
         option.value = val;
         option.text = val.charAt(0).toUpperCase() + val.slice(1);
-        classBox.appendChild(option);
+        classInput.appendChild(option);
     }
-
     const classLabel = document.createElement("label");
     classLabel.innerHTML = "Choose your Class: "
     classLabel.htmlFor = "class";
-
     inputBox2.append(classLabel)
     inputBox2.append(classInput);
-    // let classBtn = document.createElement("button");
-    // classBtn.setAttribute("class", "btn-dynamic");
-    // classBtn.type = "submit";
-    // classBtn.id = "class-submit";
-    // classBtn.innerHTML = "Confirm";
 
-    // inputBox2.append(classBtn);
+    let classBtn = document.createElement("button");
+    classBtn.setAttribute("class", "btn-dynamic");
+    classBtn.type = "submit";
+    classBtn.id = "class-submit";
+    classBtn.innerHTML = "Confirm";
+    inputBox2.append(classBtn);
     containerInfo.append(classBox);
-
+    
     let raceBox = document.createElement("div");
     // raceBox.id = "#info-box";
     raceBox.setAttribute("class", "uniform");
@@ -137,13 +129,27 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     let inputBox3 = document.createElement("div");
     inputBox3.id = "input-box3";
     raceBox.append(inputBox3);
-    let raceInput = document.createElement("input");
+   
+    let races = ["Human", "Elf", "Dwarf", "Halfling", 'Half-Elf', 'Half-Orc'];
+    let raceInput = document.createElement("select");
     raceInput.setAttribute("class", "race-input");
-    raceInput.type = "text";
+    // classInput.type = "text";
     raceInput.id = "race-input";
-    raceInput.placeholder = "Race";
+    // classInput.placeholder = "Class";
     raceInput.name = "race-input";
+
+    for (const val of races){
+        var option = document.createElement("option");
+        option.value = val;
+        option.text = val.charAt(0).toUpperCase() + val.slice(1);
+        raceInput.appendChild(option);
+    }
+    const raceLabel = document.createElement("label");
+    raceLabel.innerHTML = "Choose your Race: "
+    raceLabel.htmlFor = "Race";
+    inputBox3.append(raceLabel)
     inputBox3.append(raceInput);
+   
     let raceBtn = document.createElement("button");
     raceBtn.setAttribute("class", "btn-dynamic");
     raceBtn.type = "submit";
@@ -159,13 +165,27 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     let inputBox4 = document.createElement("div");
     inputBox4.id = "input-box4";
     sexBox.append(inputBox4);
-    let sexInput = document.createElement("input");
+
+    let sex = ["Male", "Female"];
+    let sexInput = document.createElement("select");
     sexInput.setAttribute("class", "sex-input");
-    sexInput.type = "text";
+    // classInput.type = "text";
     sexInput.id = "sex-input";
-    sexInput.placeholder = "Sex";
+    // classInput.placeholder = "Class";
     sexInput.name = "sex-input";
+
+    for (const val of sex){
+        var option = document.createElement("option");
+        option.value = val;
+        option.text = val.charAt(0).toUpperCase() + val.slice(1);
+        sexInput.appendChild(option);
+    }
+    const sexLabel = document.createElement("label");
+    sexLabel.innerHTML = "Choose your Sex: "
+    sexLabel.htmlFor = "Race";
+    inputBox4.append(sexLabel)
     inputBox4.append(sexInput);
+
     let sexBtn = document.createElement("button");
     sexBtn.setAttribute("class", "btn-dynamic");
     sexBtn.type = "submit";
@@ -181,13 +201,31 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     let inputBox5 = document.createElement("div");
     inputBox5.id = "input-box5";
     alignmentBox.append(inputBox5);
-    let alignmentInput = document.createElement("input");
+    
+    let alignment = ["Lawful-Good", "Neutral-Good", "Chaotic-Good", "Lawful-Neutral", "Neutral", "Chaotic-Neutral", "Lawful-Evil", "Neutral-Evil", "Chaotic-Evil"];
+    let alignmentInput = document.createElement("select");
     alignmentInput.setAttribute("class", "alignment-input");
-    alignmentInput.type = "text";
+    // classInput.type = "text";
     alignmentInput.id = "alignment-input";
-    alignmentInput.placeholder = "Alignment";
+    // classInput.placeholder = "Class";
     alignmentInput.name = "alignment-input";
+
+    for (const val of alignment){
+        var option = document.createElement("option");
+        option.value = val;
+        option.text = val.charAt(0).toUpperCase() + val.slice(1);
+        alignmentInput.appendChild(option);
+    }
+    const alignmentLabel = document.createElement("label");
+    alignmentLabel.innerHTML = "Choose your Alignment: "
+    alignmentLabel.htmlFor = "Race";
+    inputBox5.append(alignmentLabel)
     inputBox5.append(alignmentInput);
+
+
+    
+
+    
     let alignmentBtn = document.createElement("button");
     alignmentBtn.setAttribute("class", "btn-dynamic");
     alignmentBtn.type = "submit";
@@ -209,22 +247,22 @@ document.querySelector(".btn-start").addEventListener("click", function () {
         inputOne.remove();
       });
 
-      // document.querySelector("#class-submit").addEventListener("click", function () {
-      //   let classVar = document.getElementById("class-input").value;
-      //   let charClass = document.createElement("h2");
-      //   charClass.setAttribute("class", "class-title");
-      //   if (classVar == "") return alert("You must enter a class.");
-      //   charClass.innerHTML = `Class: ${classVar}`;
-      //   classBox.append(charClass);
-      //   const inputTwo = document.getElementById("input-box2");
-      //   inputTwo.remove();
-      // });
+      document.querySelector("#class-submit").addEventListener("click", function () {
+        let classVar = document.getElementById("class-input").value;
+        let charClass = document.createElement("h2");
+        charClass.setAttribute("class", "class-title");
+        
+        charClass.innerHTML = `Class: ${classVar}`;
+        classBox.append(charClass);
+        const inputTwo = document.getElementById("input-box2");
+        inputTwo.remove();
+      });
 
       document.querySelector("#race-submit").addEventListener("click", function () {
         let raceVar = document.getElementById("race-input").value;
         let charRace = document.createElement("h2");
         charRace.setAttribute("class", "race-title");
-        if (raceVar == "") return alert("You must enter a race.");
+        
         charRace.innerHTML = `Race: ${raceVar}`;
         raceBox.append(charRace);
         const inputThree = document.getElementById("input-box3");
@@ -235,7 +273,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
         let sexVar = document.getElementById("sex-input").value;
         let charSex = document.createElement("h2");
         charSex.setAttribute("class", "sex-title");
-        if (sexVar == "") return alert("You must enter a sex.");
+        
         charSex.innerHTML = `Sex: ${sexVar}`;
         sexBox.append(charSex);
         const inputFour = document.getElementById("input-box4");
@@ -246,7 +284,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
         let alignmentVar = document.getElementById("alignment-input").value;
         let charAlignment = document.createElement("h2");
         charAlignment.setAttribute("class", "alignment-title");
-        if (alignmentVar == "") return alert("You must enter an alignment.");
+        
         charAlignment.innerHTML = `Alignment: ${alignmentVar}`;
         alignmentBox.append(charAlignment);
         const inputFive = document.getElementById("input-box5");
