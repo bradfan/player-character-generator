@@ -11,10 +11,7 @@ const infoContainer = document.getElementById("info");
 // infoContainer.setAttribute("class", "info-large");
 
 document.querySelector(".btn-start").addEventListener("click", function () {
-  // hideHeader.setAttribute("class", "header-after");
-  // const removeBanner = document.getElementById("header-title");
-  // removeBanner.remove();
-  // hideHeader.classList.add("header-after");
+  
   // clears the created element upon each "click"
   generatorContainer.innerHTML = "";
   const startRemove = document.getElementById("start-nav");
@@ -68,7 +65,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     containerInfo.setAttribute("class", "container-info");
 
     let nameBox = document.createElement("div");
-    // nameBox.id = "info-box";
+    nameBox.id = "name-box";
     nameBox.setAttribute("class", "uniform");
     let inputBox = document.createElement("div");
     inputBox.id = "input-box";
@@ -93,7 +90,6 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     let inputBox2 = document.createElement("div");
     inputBox2.id = "input-box2";
     classBox.append(inputBox2);
-
     let values = ["Fighter", "Palladin", "Ranger", "Cleric", 'Druid', 'Magic-user', 'Illusionist', 'Thief', 'Assassin'];
     let classInput = document.createElement("select");
     classInput.setAttribute("class", "class-input");
@@ -113,7 +109,6 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     classLabel.htmlFor = "class";
     inputBox2.append(classLabel)
     inputBox2.append(classInput);
-
     let classBtn = document.createElement("button");
     classBtn.setAttribute("class", "btn-dynamic");
     classBtn.type = "submit";
@@ -125,11 +120,9 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     let raceBox = document.createElement("div");
     // raceBox.id = "#info-box";
     raceBox.setAttribute("class", "uniform");
-    
     let inputBox3 = document.createElement("div");
     inputBox3.id = "input-box3";
     raceBox.append(inputBox3);
-   
     let races = ["Human", "Elf", "Dwarf", "Halfling", 'Half-Elf', 'Half-Orc'];
     let raceInput = document.createElement("select");
     raceInput.setAttribute("class", "race-input");
@@ -149,7 +142,6 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     raceLabel.htmlFor = "Race";
     inputBox3.append(raceLabel)
     inputBox3.append(raceInput);
-   
     let raceBtn = document.createElement("button");
     raceBtn.setAttribute("class", "btn-dynamic");
     raceBtn.type = "submit";
@@ -161,11 +153,9 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     let sexBox = document.createElement("div");
     // sexBox.id = "#info-box";
     sexBox.setAttribute("class", "uniform");
-    
     let inputBox4 = document.createElement("div");
     inputBox4.id = "input-box4";
     sexBox.append(inputBox4);
-
     let sex = ["Male", "Female"];
     let sexInput = document.createElement("select");
     sexInput.setAttribute("class", "sex-input");
@@ -185,7 +175,6 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     sexLabel.htmlFor = "Race";
     inputBox4.append(sexLabel)
     inputBox4.append(sexInput);
-
     let sexBtn = document.createElement("button");
     sexBtn.setAttribute("class", "btn-dynamic");
     sexBtn.type = "submit";
@@ -197,11 +186,9 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     let alignmentBox = document.createElement("div");
     // alignmentBox.id = "#info-box";
     alignmentBox.setAttribute("class", "uniform");
-    
     let inputBox5 = document.createElement("div");
     inputBox5.id = "input-box5";
     alignmentBox.append(inputBox5);
-    
     let alignment = ["Lawful-Good", "Neutral-Good", "Chaotic-Good", "Lawful-Neutral", "Neutral", "Chaotic-Neutral", "Lawful-Evil", "Neutral-Evil", "Chaotic-Evil"];
     let alignmentInput = document.createElement("select");
     alignmentInput.setAttribute("class", "alignment-input");
@@ -221,11 +208,6 @@ document.querySelector(".btn-start").addEventListener("click", function () {
     alignmentLabel.htmlFor = "Race";
     inputBox5.append(alignmentLabel)
     inputBox5.append(alignmentInput);
-
-
-    
-
-    
     let alignmentBtn = document.createElement("button");
     alignmentBtn.setAttribute("class", "btn-dynamic");
     alignmentBtn.type = "submit";
@@ -241,10 +223,14 @@ document.querySelector(".btn-start").addEventListener("click", function () {
         let charName = document.createElement("h2");
         charName.setAttribute("class", "name-title");
         if (nameVar == "") return alert("You must enter a name.");
-        charName.innerHTML = `Name: ${nameVar}`;
-        nameBox.append(charName);
-        const inputOne = document.getElementById("input-box");
-        inputOne.remove();
+        hideHeader.setAttribute("class", "header-after");
+        const removeBanner = document.getElementById("header-title");
+        removeBanner.remove();
+        hideHeader.classList.add("header-after");
+        charName.innerHTML = `${nameVar}`;
+        hideHeader.append(charName);
+        const moveName = document.getElementById("name-box");
+        moveName.remove();
       });
 
       document.querySelector("#class-submit").addEventListener("click", function () {
