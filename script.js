@@ -189,7 +189,7 @@ document.querySelector(".btn-start").addEventListener("click", function () {
         sexInput.appendChild(option);
     }
     const sexLabel = document.createElement("label");
-    sexLabel.innerHTML = "Choose your Sex: "
+    sexLabel.innerHTML = "Choose your Sex:"
     sexLabel.htmlFor = "Race";
     inputBox4.append(sexLabel)
     inputBox4.append(sexInput);
