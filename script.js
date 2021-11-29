@@ -48,19 +48,37 @@ document.querySelector(".btn-start").addEventListener("click", function () {
   let button = document.createElement("button");
   button.setAttribute("class", "btn-confirm");
   button.innerHTML =
-    "If you like this character please click here; otherwise hit refresh.";
+    "If you like this character please click here; otherwise try again!";
   button.name = "confirm";
   button.id = "confirm";
   // button.setAttribute("class", "btn");
   buttonDiv.append(button);
 
+  let reloadDiv = document.createElement("div");
+  reloadDiv.setAttribute("class", "confirm");
+  reloadDiv.id="reload";
+  generatorContainer.append(reloadDiv);
+  let reloadButton = document.createElement("button");
+  reloadButton.setAttribute("class", "btn-reload");
+  reloadButton.innerHTML =
+    "Try Again!!";
+  reloadButton.id = "refresh";
+  // button.setAttribute("class", "btn");
+  reloadDiv.append(reloadButton);
+
   generatorContainer.append(containerGen);
+
+  document.querySelector(".btn-reload").addEventListener("click", function() {
+       location.reload();
+  })
 
   document.querySelector(".btn-confirm").addEventListener("click", function () {
     const clickedConfirm = document.querySelector(".btn-confirm");
     
     const confirmRemove = document.getElementById("confirm");
     confirmRemove.remove();
+    const reloadRemove = document.getElementById("refresh");
+    reloadRemove.remove();
     let containerInfo = document.createElement("div");
     containerInfo.setAttribute("class", "container-info");
 
@@ -287,7 +305,6 @@ document.querySelector(".btn-start").addEventListener("click", function () {
 
 // restrict alignments, race etc such as palladin is lawful good etc.
 
-// refactor a "refresh page" feature instead of telling the user to refresh the page if they get a fuckTard. push changes
 
 // 
 
